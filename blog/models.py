@@ -11,6 +11,7 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
+    comodin = models.CharField(max_length=30)
 
     def publish(self):
         self.published_date = timezone.now()
